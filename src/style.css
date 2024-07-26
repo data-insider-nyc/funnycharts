@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#chart-container {
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+}
