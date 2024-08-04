@@ -5,12 +5,12 @@ var myChart = echarts.init(dom, null, {
 });
 var option;
 
-var chart_title = "How a Golfer\nSpends Their Time";
+var chart_title = "Golfer's Post-Round Activities";
 var data = [
-  { value: 40, name: "Lost ball 😱" },
-  { value: 25, name: "Complaining 🤬" },
-  { value: 20, name: "Hitting the ball 🏌️‍♂️" },
-  { value: 15, name: "Nature break 🌳" },
+  { value: 40, name: "Complaining about\nscorecard 🤬" },
+  { value: 30, name: "Beer and stories 🍻" },
+  { value: 20, name: "Planning revenge\non the course 😈" },
+  { value: 10, name: "Actually improving \nyour game 🏌️‍♂️" },
 ];
 
 option = {
@@ -19,6 +19,8 @@ option = {
     left: "center",
     textStyle: {
       fontSize: 70,
+      width: 1000,
+      overflow: "break",
     },
     top: 100,
   },
@@ -29,8 +31,7 @@ option = {
   toolbox: {
     show: true,
     feature: {
-      // restore: {},
-      // saveAsImage: {},
+      saveAsImage: {},
     },
   },
   series: [
@@ -47,27 +48,27 @@ option = {
         minMargin: 80,
         edgeDistance: 50,
         lineHeight: 50,
-        fontSize: 40,
+        fontSize: 30,
         formatter: "{b}\n{d}%",
       },
       emphasis: {
         label: {
           show: true,
-          fontSize: 50,
+          fontSize: 40,
           fontWeight: "bold",
         },
       },
-      labelLayout: function (params) {
-        const isLeft = params.labelRect.x < myChart.getWidth() / 2;
-        const points = params.labelLinePoints;
-        // Update the end point.
-        points[2][0] = isLeft
-          ? params.labelRect.x
-          : params.labelRect.x + params.labelRect.width;
-        return {
-          labelLinePoints: points,
-        };
-      },
+      // labelLayout: function (params) {
+      //   const isLeft = params.labelRect.x < myChart.getWidth() / 2;
+      //   const points = params.labelLinePoints;
+      //   // Update the end point.
+      //   points[2][0] = isLeft
+      //     ? params.labelRect.x
+      //     : params.labelRect.x + params.labelRect.width;
+      //   return {
+      //     labelLinePoints: points,
+      //   };
+      // },
       data: data,
     },
   ],
