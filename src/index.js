@@ -31,7 +31,7 @@ option = {
   toolbox: {
     show: true,
     feature: {
-      saveAsImage: {},
+      // saveAsImage: {},
     },
   },
   series: [
