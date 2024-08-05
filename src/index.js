@@ -5,12 +5,13 @@ var myChart = echarts.init(dom, null, {
 });
 var option;
 
-var chart_title = "Golfer's Post-Round Activities";
+var chart_title = "Olympic Spectator Activities in Paris 2024";
 var data = [
-  { value: 40, name: "Complaining about\nscorecard 🤬" },
-  { value: 30, name: "Beer and stories 🍻" },
-  { value: 20, name: "Planning revenge\non the course 😈" },
-  { value: 10, name: "Actually improving \nyour game 🏌️‍♂️" },
+  { value: 35, name: "🇫🇷 Trying to pronounce French athlete names" },
+  { value: 25, name: "🥐 Hunting for the perfect croissant" },
+  { value: 20, name: "🤺 Pretending to understand fencing rules" },
+  { value: 15, name: "📸 Instagramming every moment" },
+  { value: 5, name: "🏅 Actually watching the events" },
 ];
 
 option = {
@@ -50,11 +51,12 @@ option = {
         lineHeight: 50,
         fontSize: 30,
         formatter: "{b}\n{d}%",
+        overflow: "break",
       },
       emphasis: {
         label: {
           show: true,
-          fontSize: 40,
+          fontSize: 34, // set 40 if text isn't too long
           fontWeight: "bold",
         },
       },
@@ -110,7 +112,7 @@ function highlightLoop() {
       seriesIndex: 0,
       dataIndex: currentIndex,
     });
-  }, 1000); // Change slice every 2 seconds
+  }, 1500); // Change slice every 2 seconds
 }
 
 // Start the highlight loop
