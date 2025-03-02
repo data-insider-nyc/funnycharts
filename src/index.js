@@ -5,13 +5,13 @@ var myChart = echarts.init(dom, null, {
 });
 var option;
 
-var chart_title = "Olympic Spectator Activities in Paris 2024";
+var chart_title = "Superheroes and Their Quirky Daily Activities";
 var data = [
-  { value: 35, name: "🇫🇷 Trying to pronounce French athlete names" },
-  { value: 25, name: "🥐 Hunting for the perfect croissant" },
-  { value: 20, name: "🤺 Pretending to understand fencing rules" },
-  { value: 15, name: "📸 Instagramming every moment" },
-  { value: 5, name: "🏅 Actually watching the events" },
+  { value: 35, name: "🦸‍♂️ Saving the world... with snacks" },
+  { value: 25, name: "🦸‍♀️ Fashioning new capes for the season" },
+  { value: 20, name: "💥 Training for the next big explosion" },
+  { value: 10, name: "⚡️ Speeding through the grocery store" },
+  { value: 5, name: "🧘‍♂️ Practicing yoga with sidekicks" },
 ];
 
 option = {
@@ -46,11 +46,11 @@ option = {
       label: {
         show: true,
         alignTo: "edge",
-        minMargin: 80,
+        minMargin: 50,
         edgeDistance: 50,
-        lineHeight: 50,
-        fontSize: 30,
-        formatter: "{b}\n{d}%",
+        // lineHeight: 50,
+        fontSize: 25,
+        formatter: "{b} {d}%",
         overflow: "break",
       },
       emphasis: {
